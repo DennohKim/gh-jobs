@@ -4,7 +4,7 @@ import Search from "../components/Search";
 const LandingPage = () => {
   return (
     <div className="w-full">
-      <div className="w-4/5 mx-auto">
+      <div className="w-4/5 mx-auto ">
         
         <Search />
       </div>

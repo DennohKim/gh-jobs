@@ -3,8 +3,8 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="w-full">
-      <div className="w-4/5">
-        <p>
+      <div className="w-4/5 my-10">
+        <p className="text-xl">
           <span className="font-bold">Github</span> Jobs
         </p>
       </div>
