@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className="w-full">
       <div className="w-4/5 my-10">
         <p className="text-xl">
-          <span className="font-bold">Github</span> Jobs
+          <span className="font-bold">Remote Developer</span> Jobs
         </p>
       </div>
     </div>
