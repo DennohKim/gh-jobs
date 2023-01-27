@@ -9,7 +9,7 @@ const LandingPage = () => {
       <div className="w-4/5 mx-auto ">
         <Search />
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 space-x-0 md:space-x-4">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 space-x-0 md:space-x-4">
           <div>
             <form onSubmit={() => {}} className="flex flex-col space-y-3">
               <div>

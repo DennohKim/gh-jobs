@@ -1,34 +1,37 @@
 import React from "react";
+import { relativeDate } from "../helpers/relativeDate";
+import { BiWorld, BiTime } from "react-icons/bi";
+
 import { Link } from "react-router-dom";
 
-const JobCard = ({
-  jobId,
-  company_logoUrl,
-  company_name,
-  role,
-  role_time,
-  location,
-  uploaded_time,
-}) => {
+const JobCard = ({ job, currentPage, setCurrentPage, maxPostPage }) => {
   return (
-    <Link to={`/job/${jobId}`}>
-      <div className="rounded-md shadow-md flex justify-between mb-8">
-        <div className="flex space-x-3">
-          <div>
-            <img src={company_logoUrl} alt="" />
+    <>
+      <Link to={`/jobs/${job.id}`}>
+        <div className="rounded-md shadow-md flex justify-between mb-8 p-4">
+          <div className="flex space-x-3">
+            <div>
+              <img className="h-24 w-24 object-cover" src={job.logo} alt="" />
+            </div>
+            <div className="flex flex-col space-y-3">
+              <p className="font-bold text-sm">{job.company}</p>
+              <p className=" text-xl">{job.position}</p>
+              <div className=""></div>
+            </div>
           </div>
-          <div className="flex flex-col space-y-3">
-            <p>{company_name}</p>
-            <p>{role}</p>
-            <button>{role_time}</button>
+          <div className="flex justify-between space-x-5 items-end">
+            <div className="flex justify-between align-center items-center space-x-2">
+              <BiWorld className="text-gray-500" />
+              <p>{job.location}</p>
+            </div>
+            <div className="flex justify-between align-center items-center space-x-2">
+              <BiTime className="text-gray-500" />
+              <p>{relativeDate(job.date)}</p>
+            </div>
           </div>
         </div>
-        <div className="flex justify-between">
-          <p>{location}</p>
-          <p>{uploaded_time}</p>
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </>
   );
 };
 
